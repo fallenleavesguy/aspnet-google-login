@@ -8,9 +8,26 @@
 </div>
 
 <script src="https://accounts.google.com/gsi/client" async defer></script>
+@* <button onclick="googleLogin()">google登录</button>
+<script>
+    function handleCredentialResponse(...args) {
+        console.log(args);
+    }
+
+    window.onload = function () {
+        google.accounts.id.initialize({
+            client_id: '396183240740-el51flsmq3a5j46q3s785e4ni1p7qcnj.apps.googleusercontent.com',
+            callback: handleCredentialResponse
+        });
+    };
+
+    function googleLogin() {
+        google.accounts.id.prompt();
+    }
+</script> *@
 <div id="g_id_onload"
-     data-client_id="xxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com"
-     data-login_uri="https://localhost:7046/Home/ValidGoogleLogin"
+     data-client_id="396183240740-el51flsmq3a5j46q3s785e4ni1p7qcnj.apps.googleusercontent.com"
+     data-login_uri="https://localhost:9494/Home/ValidGoogleLogin"
      data-auto_prompt="false">
 </div>
 <div class="g_id_signin"

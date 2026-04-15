@@ -53,10 +53,13 @@ namespace TeachGoogleLogin.Controllers
                 ViewData["Msg"] = "驗證 Google 授權成功" + "<br>";
                 ViewData["Msg"] += "Email:" + payload.Email + "<br>";
                 ViewData["Msg"] += "Name:" + payload.Name + "<br>";
-                ViewData["Msg"] += "Picture:" + payload.Picture;
+                ViewData["Msg"] += "Picture:" + payload.Picture + "<br />";
+                ViewData["Msg"] += "Subject:" + payload.Subject;
             }
 
             return View();
+
+            //return Redirect("https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=s&fenlei=256&rsv_pq=0xee7042ee00f2442c&rsv_t=2387WE5CWlAaLrA213jiBxul4mxZvDohlNSBX5Fg2UygU2AsSBcP6ndW9CwM&rqlang=en&rsv_enter=1&rsv_dl=tb_enter&rsv_sug3=2&rsv_sug1=2&rsv_sug7=101&rsv_btype=i&inputT=887&rsv_sug4=932");
         }
 
         /// <summary>
